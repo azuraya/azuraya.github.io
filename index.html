@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    #welcome-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      opacity: 0; /* Awalnya diatur menjadi tidak terlihat */
+      animation: fadeIn 1s ease-in-out forwards; /* Animasi masuk dengan durasi 1 detik */
+    }
+
+    #welcome-message {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      text-align: center;
+      max-width: 400px;
+      opacity: 0; /* Awalnya diatur menjadi tidak terlihat */
+      animation: slideIn 0.5s ease-in-out 0.5s forwards; /* Animasi slideIn dengan durasi 0.5 detik setelah fadeIn */
+    }
+
+    #enter-button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    #enter-button:hover {
+      background-color: #2980b9;
+    }
+
+    /* Animasi fadeIn */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Animasi slideIn */
+    @keyframes slideIn {
+      from {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+  <title>Selamat Datang</title>
+</head>
+<body>
+
+<div id="welcome-container">
+  <div id="welcome-message">
+    <h1>Selamat Datang!</h1>
+    <p>Halo Mas bro Selamat datang di Azuraya Vape. <br>
+    siapkan duit kalian buat bergaya, lalu klik enjoy di bawah yaa !!</p>
+    <button id="enter-button" onclick="redirectToMain()">ENJOY</button>
+  </div>
+</div>
+
+<script>
+  // Fungsi untuk mengarahkan ke halaman utama
+  function redirectToMain() {
+    window.location.href = "https://azuraya.github.io/home.html";
+  }
+</script>
+
+</body>
+</html>
